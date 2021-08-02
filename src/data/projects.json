@@ -8,7 +8,7 @@
     {
         "project_name": "SA-MP Textures",
         "project_desc": "An app that enables you to copy a snippet of object texture in just one click.",
-        "project_link": "https://samp-textures.iamaul.me",
+        "project_link": "https://samp-textures.vercel.app/",
         "project_source_code": "https://github.com/iamaul/samp-textures"
     }
 ]
