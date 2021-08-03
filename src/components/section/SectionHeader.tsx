@@ -5,7 +5,6 @@ const SectionHeader = ({ children, ...rest }) => {
         <Heading
             textTransform="uppercase"
             size="xs"
-            color="#55265a"
             letterSpacing="1.3px"
             fontWeight="bold"
             mb={8}
