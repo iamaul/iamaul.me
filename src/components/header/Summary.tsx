@@ -23,7 +23,7 @@ const Summary: React.FC = () => {
                         boxSize="120px"
                         objectFit="cover"
                         style={{ borderRadius: '3px' }}
-                        src="https://media-exp1.licdn.com/dms/image/C5603AQFqkVdumwp7VA/profile-displayphoto-shrink_400_400/0/1517344541288?e=1633564800&v=beta&t=IlcjiwIWQQLspns7C5um2p03FCnDIG5LB4oHMn5gYlM"
+                        src="https://cdn.discordapp.com/avatars/676575693072498698/f10ee7fca0079c04ebdc4c62b89180ff.png?size=1024"
                         alt="profile-picture"
                     />
                 </Flex>   
