@@ -33,9 +33,8 @@ const Summary: React.FC = () => {
                 <Box>
                     <Text mb={4} align="justify">
                         I'm a software engineer based in Jakarta. Mostly, I'm focused on back-end development to provide an API service
-                        and also I really enjoyed on front-end, especially developing a web application using React. 
-                        I like to solve technical problems, analyse the business process, and learn about other things.<br/><br/>Outside of Programming, 
-                        I've been studying SAP ERP in Computer Science to design a wide variety of business processes.
+                        and also I really enjoyed on front-end, building both web and mobile applications. I like to solve technical problems, analyse the business process, 
+                        and learn about other things.<br/><br/>Outside of Programming, I've been studying SAP ERP in Computer Science to design a wide variety of business processes.
                         <br/><br/>
                         Send me an <Link
                             href="mailto:iamaul@hotmail.com"
