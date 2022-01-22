@@ -30,7 +30,26 @@ export const Project = ({ projects }: ProjectProps) => {
                     whileHover={{ scale: 1.05 }}
                     role="group"
                 >
-                    <Box p={6} border="1px solid" borderColor="gray" shadow="sm">
+<!--                     <Box
+                      p={6} 
+                      border="1px solid" 
+                      borderColor="gray" 
+                      shadow="lg"> -->
+                      <HStack
+                        p={4}
+                        bg="white"
+                        rounded="lg"
+                        borderWidth="1px"
+                        borderColor="gray"
+                        w="100%"
+                        h="100%"
+                        textAlign="left"
+                        align="start"
+                        spacing={4}
+                        transition="all 0.25s"
+                        transition-timing-function="spring(1 100 10 10)"
+                        _hover={{ transform: "translateY(-4px)", shadow: "lg" }}
+                      >
                         <Flex justifyContent="space-between" alignItems="center" mb={4}>
                             <Heading size="md">{project.project_name}</Heading>
                         </Flex>
@@ -43,8 +62,6 @@ export const Project = ({ projects }: ProjectProps) => {
                                     isExternal
                                     >
                                     <Button
-                                        // data-splitbee-event={`${project.project_name} - Live`}
-                                        // data-splitbee-event-type="Projects"
                                         size="xs"
                                         variant="ghost"
                                         _hover={{ 
@@ -64,8 +81,6 @@ export const Project = ({ projects }: ProjectProps) => {
                                     isExternal
                                 >
                                     <Button
-                                        // data-splitbee-event={`${project.project_name} - Source Code`}
-                                        // data-splitbee-event-type="Projects"
                                         size="xs"
                                         variant="ghost"
                                         _hover={{ 
@@ -80,7 +95,8 @@ export const Project = ({ projects }: ProjectProps) => {
                                 </Link>
                             )}
                         </HStack>
-                    </Box>
+<!--                     </Box> -->
+                  </HStack>
                 </MotionBox>
                 </div>
             ))}
