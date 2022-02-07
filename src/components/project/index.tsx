@@ -25,72 +25,67 @@ export const Project = ({ projects }: ProjectProps) => {
         <>
             {projects.map((project, index) => (
                 <div key={index}>
-                <MotionBox
-                    position="relative"
-                    whileHover={{ scale: 1.05 }}
-                    role="group">
-                      <HStack
-                        p={4}
-                        bg="white"
-                        rounded="lg"
-                        borderWidth="1px"
-                        borderColor="gray"
-                        w="100%"
-                        h="100%"
-                        textAlign="left"
-                        align="start"
-                        spacing={4}
-                        transition="all 0.25s"
-                        transition-timing-function="spring(1 100 10 10)"
-                        _hover={{ transform: "translateY(-4px)", shadow: "lg" }}
-                      >
-                        <Flex justifyContent="space-between" alignItems="center" mb={4}>
-                            <Heading size="md">{project.project_name}</Heading>
-                        </Flex>
-                        <Text>{project.project_desc}</Text>
-                        <HStack fontSize="sm" mt={4} color="trueGray.500">
-                            {project.project_link !== null && (
-                                <Link 
-                                    href={project.project_link} 
-                                    variant="ghost"
-                                    isExternal
-                                    >
-                                    <Button
-                                        size="xs"
+                    <MotionBox
+                        position="relative"
+                        whileHover={{ scale: 1.05 }}
+                        role="group">
+                        <Box 
+                            p={6} 
+                            border="1px solid" 
+                            rounded="lg"
+                            borderWidth="1px"
+                            borderColor="gray"
+                            transition="all 0.25s"
+                            transition-timing-function="spring(1 100 10 10)"
+                            _hover={{ transform: "translateY(-4px)", shadow: "lg" }}
+                        >
+                            <Flex justifyContent="space-between" alignItems="center" mb={4}>
+                                <Heading size="md">{project.project_name}</Heading>
+                            </Flex>
+                            <Text>{project.project_desc}</Text>
+                            <HStack fontSize="sm" mt={4} color="trueGray.500">
+                                {project.project_link !== null && (
+                                    <Link 
+                                        href={project.project_link} 
                                         variant="ghost"
-                                        _hover={{ 
-                                            backgroundColor: '#55265a', 
-                                            color: 'white',
-                                            fontWeight: 'bold' 
-                                        }}
-                                        rightIcon={<FaLink />}
+                                        isExternal
+                                        >
+                                        <Button
+                                            size="xs"
+                                            variant="ghost"
+                                            _hover={{ 
+                                                backgroundColor: '#55265a', 
+                                                color: 'white',
+                                                fontWeight: 'bold' 
+                                            }}
+                                            rightIcon={<FaLink />}
+                                        >
+                                            Live
+                                        </Button>
+                                    </Link>
+                                )}
+                                {project.project_source_code !== null && (
+                                    <Link 
+                                        href={project.project_source_code}
+                                        isExternal
                                     >
-                                        Live
-                                    </Button>
-                                </Link>
-                            )}
-                            {project.project_source_code !== null && (
-                                <Link 
-                                    href={project.project_source_code}
-                                    isExternal
-                                >
-                                    <Button
-                                        size="xs"
-                                        variant="ghost"
-                                        _hover={{ 
-                                            backgroundColor: '#55265a', 
-                                            color: 'white',
-                                            fontWeight: 'bold' 
-                                        }}
-                                        rightIcon={<FaCode />}
-                                    >
-                                        Source Code
-                                    </Button>
-                                </Link>
-                            )}
-                        </HStack>
-                  </HStack>
-                </MotionBox>
+                                        <Button
+                                            size="xs"
+                                            variant="ghost"
+                                            _hover={{ 
+                                                backgroundColor: '#55265a', 
+                                                color: 'white',
+                                                fontWeight: 'bold' 
+                                            }}
+                                            rightIcon={<FaCode />}
+                                        >
+                                            Source Code
+                                        </Button>
+                                    </Link>
+                                )}
+                            </HStack>
+                        </Box>
+                    </MotionBox>
                 </div>
             ))}
         </>

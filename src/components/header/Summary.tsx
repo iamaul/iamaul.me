@@ -20,7 +20,7 @@ const Summary: React.FC = () => {
                 </div>
                 <Flex w="full" justifyContent="flex-end">
                     <Image
-                        boxSize="120px"
+                        boxSize="200px"
                         objectFit="cover"
                         style={{ borderRadius: '3px' }}
                         src="/IMG_0856.png"
