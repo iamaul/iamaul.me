@@ -23,7 +23,7 @@ const Summary: React.FC = () => {
                         boxSize="120px"
                         objectFit="cover"
                         style={{ borderRadius: '3px' }}
-                        src="/IMG_0855.png"
+                        src="/IMG_0856.png"
                         alt="profile-picture"
                     />
                 </Flex>   
