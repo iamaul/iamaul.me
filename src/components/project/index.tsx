@@ -28,13 +28,7 @@ export const Project = ({ projects }: ProjectProps) => {
                 <MotionBox
                     position="relative"
                     whileHover={{ scale: 1.05 }}
-                    role="group"
-                >
-<!--                     <Box
-                      p={6} 
-                      border="1px solid" 
-                      borderColor="gray" 
-                      shadow="lg"> -->
+                    role="group">
                       <HStack
                         p={4}
                         bg="white"
@@ -95,7 +89,6 @@ export const Project = ({ projects }: ProjectProps) => {
                                 </Link>
                             )}
                         </HStack>
-<!--                     </Box> -->
                   </HStack>
                 </MotionBox>
                 </div>
