@@ -20,10 +20,10 @@ const Summary: React.FC = () => {
                 </div>
                 <Flex w="full" justifyContent="flex-end">
                     <Image
-                        boxSize="200px"
+                        boxSize="120px"
                         objectFit="cover"
                         style={{ borderRadius: '3px' }}
-                        src="/IMG_0856.png"
+                        src="/IMG_0733.png"
                         alt="profile-picture"
                     />
                 </Flex>   
