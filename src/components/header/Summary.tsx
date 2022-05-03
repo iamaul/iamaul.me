@@ -32,7 +32,7 @@ const Summary: React.FC = () => {
             <Stack spacing={12}>
                 <Box>
                     <Text mb={4} align="justify">
-                        I'm a software engineer based in Jakarta, work mainly on backend. I also really enjoy working on frontend, building both web and mobile applications. I like to solve technical problems, analyse the business process, 
+                        I'm a software engineer based in Jakarta, work mainly on backend. I also enjoy working on frontend, building both web and mobile applications. I like to solve technical problems, analyse the business process, 
                         and learn about other things.<br/><br/>Outside of Programming, I studied SAP ERP in Computer Science to design a wide variety of business processes.
                         <br/><br/>
                         Send me an <Link
