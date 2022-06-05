@@ -10,20 +10,21 @@ import {
 } from '@chakra-ui/react';
 import { 
     FaLink,
-    FaCode
+    FaLinkedin,
+    FaInstagram
 } from 'react-icons/fa';
 
-import { ProjectEntity } from '@/models/Project';
+import { ActivityEntity } from '@/models/Activity';
 import MotionBox from '@/components/MotionBox';
 
-interface ProjectProps {
-    projects: ProjectEntity[];
+interface ActivityProps {
+    activities: ActivityEntity[];
 }
 
-export const Project = ({ projects }: ProjectProps) => {
+export const Activity = ({ activities }: ActivityProps) => {
     return (
         <>
-            {projects.map((project, index) => (
+            {activities.map((data, index) => (
                 <div key={index}>
                     <MotionBox
                         position="relative"
@@ -40,13 +41,13 @@ export const Project = ({ projects }: ProjectProps) => {
                             _hover={{ transform: "translateY(-4px)", shadow: "lg" }}
                         >
                             <Flex justifyContent="space-between" alignItems="center" mb={4}>
-                                <Heading size="md">{project.project_name}</Heading>
+                                <Heading size="md">{data.activity_name}</Heading>
                             </Flex>
-                            <Text>{project.project_desc}</Text>
+                            <Text>{data.activity_desc}</Text>
                             <HStack fontSize="sm" mt={4} color="trueGray.500">
-                                {project.project_link !== null && (
+                                {data.activity_link !== null && (
                                     <Link 
-                                        href={project.project_link} 
+                                        href={data.activity_link} 
                                         variant="ghost"
                                         isExternal
                                         >
@@ -60,13 +61,13 @@ export const Project = ({ projects }: ProjectProps) => {
                                             }}
                                             rightIcon={<FaLink />}
                                         >
-                                            Live
+                                            Website
                                         </Button>
                                     </Link>
                                 )}
-                                {project.project_source_code !== null && (
+                                {data.activity_linkedin !== null && (
                                     <Link 
-                                        href={project.project_source_code}
+                                        href={data.activity_linkedin}
                                         isExternal
                                     >
                                         <Button
@@ -77,9 +78,28 @@ export const Project = ({ projects }: ProjectProps) => {
                                                 color: 'white',
                                                 fontWeight: 'bold' 
                                             }}
-                                            rightIcon={<FaCode />}
+                                            rightIcon={<FaLinkedin />}
                                         >
-                                            Source Code
+                                            LinkedIn
+                                        </Button>
+                                    </Link>
+                                )}
+                                {data.activity_instagram !== null && (
+                                    <Link 
+                                        href={data.activity_instagram}
+                                        isExternal
+                                    >
+                                        <Button
+                                            size="xs"
+                                            variant="ghost"
+                                            _hover={{ 
+                                                backgroundColor: '#55265a', 
+                                                color: 'white',
+                                                fontWeight: 'bold' 
+                                            }}
+                                            rightIcon={<FaInstagram />}
+                                        >
+                                            Instagram
                                         </Button>
                                     </Link>
                                 )}

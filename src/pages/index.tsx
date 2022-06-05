@@ -5,18 +5,18 @@ import { Stack } from '@chakra-ui/react';
 
 import AppLayout from '@/components/layout/App';
 import { Section } from '@/components/section';
-import { Project } from '@/components/project';
+import { Activity } from '@/components/activity';
 
-import { ProjectEntity } from '@/models/Project';
+import { ActivityEntity } from '@/models/Activity';
 
-import projects from '@/data/projects.json';
+import activities from '@/data/activities.json';
 
-const HomePage = ({ projects }: InferGetStaticPropsType<typeof getStaticProps>) => (
+const HomePage = ({ activities }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <>
     <AppLayout>
-      <Section header="Projects">
+      <Section header="Activities">
         <Stack spacing={8}>
-          <Project projects={projects} />
+          <Activity activities={activities} />
         </Stack>
       </Section>
     </AppLayout>
@@ -24,11 +24,11 @@ const HomePage = ({ projects }: InferGetStaticPropsType<typeof getStaticProps>) 
 )
 
 export const getStaticProps: GetStaticProps = async () => {
-  const projectsData: ProjectEntity[] = projects;
+  const activitiesData: ActivityEntity[] = activities;
 
   return {
     props: {
-      projects: projectsData,
+      activities: activitiesData,
     },
   }
 }
